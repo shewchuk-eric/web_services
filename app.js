@@ -6,14 +6,3 @@ app.use('/', require('./routes'));
  
 app.listen(process.env.PORT || port);
 console.log('Web Server is listening at port ' + (process.env.PORT || port));
-
-// initialize database connection
-// const mongodb = require('./connections');
-
-// mongodb.initDb((err, mongodb ) => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     app.listen(3000);
-//   }
-// });
