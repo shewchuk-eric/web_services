@@ -2,7 +2,7 @@
 
 const express = require('express');
 // const Writer = require('./routes/writer');
-const Writer = require('../routes/writer');
+const Writer = require('./routes/writer');
 const writer = new Writer();
 const app = express();
 const port = 3000;
