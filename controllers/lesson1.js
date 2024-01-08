@@ -1,7 +1,8 @@
+const tree = 'I am ';
 const nameTag = 'My name is ';
 
 const grootRoute = (req, res) => {
-    res.send(`${nameTag} Groot`);
+    res.send(`${tree} Groot`);
 };
 
 const rocketRoute = (req, res) => {
