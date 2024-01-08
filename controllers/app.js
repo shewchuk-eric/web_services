@@ -1,16 +1,18 @@
 // SECTION 1 ***********************************************
 
 const express = require('express');
+// const Writer = require('./routes/writer');
+const Writer = require('../routes/writer');
+const writer = new Writer();
 const app = express();
- 
-app.get('/', (req, res) => {
-  res.send("My name is Groot");
-});
-
 const port = 3000;
  
+app.get('/', (req, res) => {
+  res.send(`My name is ${writer.name}`);
+});
+ 
 app.listen(process.env.PORT || port, () => {
-  console.log('Web Server is listening at port ' + (process.env.PORT || 3000));
+  console.log('Web Server is listening at port ' + (process.env.PORT || port));
 });
 
 // SECTION 2 ***********************************************
