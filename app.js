@@ -1,27 +1,17 @@
-const EventEmitter = require('events');
+// SECTION 1 ***********************************************
 
-const Logger = require('./logger');
-const logger = new Logger();
-
-// register a listener
-logger.on('messageLogged', (arg) => {
-  console.log('Listener Called', arg);
+const express = require('express');
+const app = express();
+ 
+app.get('/', (req, res) => {
+  res.send("My name is Groot");
 });
 
-logger.log('message');
-
-// SECTION 1 **********************************************
-
-// const express = require('express');
-// const app = express();
+const port = 3000;
  
-// app.get('/', (req, res) => {
-//   res.send("Hello World");
-// });
- 
-// app.listen(process.env.PORT || 3000, () => {
-//   console.log('Web Server is listening at port ' + (process.env.PORT || 3000));
-// });
+app.listen(process.env.PORT || port, () => {
+  console.log('Web Server is listening at port ' + (process.env.PORT || 3000));
+});
 
 // SECTION 2 ***********************************************
 
@@ -50,3 +40,17 @@ logger.log('message');
 // app.listen(process.env.PORT || 3000, () => {
 //   console.log('Web Server is listening at port ' + (process.env.PORT || 3000));
 // });
+
+// SECTION 3 ***********************************************
+
+// const EventEmitter = require('events');
+
+// const Logger = require('./logger');
+// const logger = new Logger();
+
+// // register a listener
+// logger.on('messageLogged', (arg) => {
+//   console.log('Listener Called', arg);
+// });
+
+// logger.log('message');
