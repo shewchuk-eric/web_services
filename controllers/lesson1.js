@@ -1,5 +1,6 @@
 const tree = 'I am ';
 const nameTag = 'My name is ';
+const dbase = require('../routes/connections');
 
 const grootRoute = (req, res) => {
     res.send(`${tree} Groot`);
@@ -13,6 +14,10 @@ const starlordRout = (req, res) => {
     res.send(`${nameTag} Star Lord`);
 };
 
+const DBRout = (req, res) => {
+    res.send(dbase.connectDB());
+};
+
 module.exports = {
-    grootRoute, rocketRoute, starlordRout
+    grootRoute, rocketRoute, starlordRout, DBRout
 };
