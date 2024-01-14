@@ -1,6 +1,13 @@
 const express = require('express');
-const connectDB = require('./routes/connections'); // USE FOR WEEK 2 LEARNING ASSIGNMENT
 const app = express();
+// const http = require('http');
+// const server = http.createServer(function(req, res) {
+//     console.log('bite me');
+// });
+const dotenv = require('dotenv'); // this line and the next required to use .env variables
+dotenv.config();
+const connectDB = require('./routes/connections'); // USE FOR WEEK 2 LEARNING ASSIGNMENT
+
 
 // connectDB();
 const port = process.env.PORT || 3000;
